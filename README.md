@@ -26,10 +26,6 @@ Special thanks goes to all [ contributors ](https://github.com/TechProber/cloud-
 
 [Pro Bot](https://github.com/TechProber/pro-bot) is inspired and introduced in 2022. Currently, it is maintained by [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu).
 
-## Reference
-
-- [Build a Telegram Bot in Go in 9 minutes](https://medium.com/swlh/build-a-telegram-bot-in-go-in-9-minutes-e06ad38acef1)
-
 ## License
 
 [MIT (C) TechProber](https://github.com/TechProber/pro-bot/blob/master/LICENSE)
