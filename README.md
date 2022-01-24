@@ -6,12 +6,14 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/license/TechProber/pro-bot?color=critical" alt="License"/>
+    <a href="https://app.netlify.com/sites/pro-bot/deploys">
+        <img src="https://api.netlify.com/api/v1/badges/eb4b8a29-181d-4d48-980e-ebce39edafb8/deploy-status">
+    </a>
     <a href="https://hits.seeyoufarm.com">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTechProber%2Fpro-bot&count_bg=%235322B2&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
+        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTechProber%2Fpro-bot&count_bg=%235322B2&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
     </a>
     <a href="https://img.shields.io/tokei/lines/github/TechProber/pro-bot?color=orange">
-      <img src="https://img.shields.io/tokei/lines/github/TechProber/pro-bot?color=orange" alt="lines">
+        <img src="https://img.shields.io/tokei/lines/github/TechProber/pro-bot?color=orange" alt="lines">
     </a>
     <a href="https://hub.docker.com/repository/docker/hikariai/">
         <img src="https://img.shields.io/badge/docker-v20.10.7-blue" alt="Version">
@@ -21,6 +23,9 @@
     </a>
     <a href="https://github.com/TechProber/pro-bot">
         <img src="https://img.shields.io/github/last-commit/TechProber/pro-bot" alt="lastcommit"/>
+    </a>
+    <a href="https://github.com/TechProber/pro-bot/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/TechProber/pro-bot?color=critical" alt="License"/>
     </a>
 </p>
 
@@ -66,6 +71,7 @@ Special thanks go to all [ contributors ](https://github.com/TechProber/pro-bot/
 - [https://stackoverflow.com/questions/52765833/why-i-cant-send-sticker-by-its-id](https://stackoverflow.com/questions/52765833/why-i-cant-send-sticker-by-its-id)
 - [Telegram, getting file_id for existing sticker](https://stackoverflow.com/questions/34355648/telegram-getting-file-id-for-existing-sticker)
 - [How to set up push notifications in your Telegram bot](https://www.freecodecamp.org/news/telegram-push-notifications-58477e71b2c2/)
+- [https://lornajane.net/posts/2020/a-first-netlify-function-in-golang](https://lornajane.net/posts/2020/a-first-netlify-function-in-golang)
 
 ## Development Notes
 
@@ -78,6 +84,7 @@ POST `https://api.telegram.org/bot<token>/sendMessage?chat_id=<id>&text=<text_st
 ```bash
 curl -X POST https://api.telegram.org/bot<token>/sendMessage?chat_id=<id>&text=<text_string>
 ```
+
 ### Send Sticker
 
 POST `https://api.telegram.org/bot<token>/sendSticker?chat_id=<id>&sticker=<sticker_id>`
