@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
-  "strings"
+	"strings"
 
 	"github.com/TechProber/pro-bot/method"
 	"github.com/TechProber/pro-bot/model"
@@ -17,7 +17,7 @@ func Handler(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-  if !strings.Contains(strings.ToLower(body.Message.Text), "hi") {
+	if !strings.Contains(strings.ToLower(body.Message.Text), "morning") {
 		return
 	}
 
