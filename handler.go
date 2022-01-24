@@ -5,6 +5,8 @@ import (
 	"log"
 	"net/http"
 	"strings"
+
+	"github.com/TechProber/pro-bot/methods"
 )
 
 // This handler is called everytime telegram sends us a webhook event
@@ -20,7 +22,7 @@ func Handler(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	if err := SayHi(body.Message.Chat.ID); err != nil {
+	if err := methods.SayHi(body.Message.Chat.ID); err != nil {
 		log.Println("error in sending reply:", err)
 		return
 	}
