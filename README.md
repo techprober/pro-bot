@@ -54,15 +54,47 @@ pre-commit install
 
 ## Contributors
 
-Special thanks goes to all [ contributors ](https://github.com/TechProber/pro-bot/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/TechProber/pro-bot/blob/master/docs/contribute.md).
+Special thanks go to all [ contributors ](https://github.com/TechProber/pro-bot/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/TechProber/pro-bot/blob/master/docs/contribute.md).
 
-[Pro Bot](https://github.com/TechProber/pro-bot) is inspired and introduced in 2022. Currently, it is maintained by [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu).
+[Pro Bot](https://github.com/TechProber/pro-bot) is inspired and introduced in 2022. Currently, it is maintained by [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu)
 
 ## Reference
 
 - [Telegram Bot API](https://core.telegram.org/bots/api)
 - [Sending a message to a Telegram channel the easy way](https://medium.com/javarevisited/sending-a-message-to-a-telegram-channel-the-easy-way-eb0a0b32968)
 - [Can a Telegram bot read messages of channel](https://stackoverflow.com/questions/42672034/can-a-telegram-bot-read-messages-of-channel)
+- [https://stackoverflow.com/questions/52765833/why-i-cant-send-sticker-by-its-id](https://stackoverflow.com/questions/52765833/why-i-cant-send-sticker-by-its-id)
+- [Telegram, getting file_id for existing sticker](https://stackoverflow.com/questions/34355648/telegram-getting-file-id-for-existing-sticker)
+- [How to set up push notifications in your Telegram bot](https://www.freecodecamp.org/news/telegram-push-notifications-58477e71b2c2/)
+
+## Development Notes
+
+<details><summary>Sample API Call</summary>
+
+### Send Text
+
+POST `https://api.telegram.org/bot<token>/sendMessage?chat_id=<id>&text=<text_string>`
+
+```bash
+curl -X POST https://api.telegram.org/bot<token>/sendMessage?chat_id=<id>&text=<text_string>
+```
+### Send Sticker
+
+POST `https://api.telegram.org/bot<token>/sendSticker?chat_id=<id>&sticker=<sticker_id>`
+
+```bash
+curl -X POST https://api.telegram.org/bot<token>/sendSticker?chat_id=<id>&sticker=<sticker_id>
+```
+
+### Get Update
+
+GET `https://api.telegram.org/bot{bot_token}/getUpdates`
+
+```bash
+curl -X GET https://api.telegram.org/bot{bot_token}/getUpdates
+```
+
+</details>
 
 ## License
 
