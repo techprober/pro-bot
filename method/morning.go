@@ -10,11 +10,11 @@ import (
 	"github.com/TechProber/pro-bot/model"
 )
 
-func Hello(chatID int64, message string) error {
+func Morning(chatID int64, message string) error {
 	log.Println(message)
-	reqBody := &model.MessageReqBody{
-		ChatID: chatID,
-		Text:   "Nihao!!",
+	reqBody := &model.StickerReqBody{
+		ChatID:  chatID,
+		Sticker: model.GoodMorningStickerRef,
 	}
 
 	reqBytes, err := json.Marshal(reqBody)
@@ -23,7 +23,7 @@ func Hello(chatID int64, message string) error {
 	}
 
 	res, err := http.Post(
-		model.TelegramApi + model.TelegramApiSendMessagePath,
+		model.TelegramApi + model.TelegramApiSendStickerPath,
 		"application/json",
 		bytes.NewBuffer(reqBytes),
 	)

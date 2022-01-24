@@ -21,7 +21,7 @@ func Handler(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	if err := method.Hello(body.Message.Chat.ID, body.Message.Text); err != nil {
+	if err := method.Morning(body.Message.Chat.ID, body.Message.Text); err != nil {
 		log.Println("error in sending reply:", err)
 		return
 	}

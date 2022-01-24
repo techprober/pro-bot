@@ -11,4 +11,4 @@ const TelegramApiSendStickerPath string = "/sendSticker"
 
 const GoodMorningStickerRef = "CAACAgUAAxkBAAMoYe4q6wt_DVzPJjWKuuQRHm9zlxAAAtQDAAJnwDBWd7ZQ91obYOEjBA"
 
-var TelegramApi string = TelegramApiBaseUrl + os.Getenv("TELEGRAM_TOKEN") + TelegramApiSendStickerPath
+var TelegramApi string = TelegramApiBaseUrl + os.Getenv("TELEGRAM_TOKEN")
