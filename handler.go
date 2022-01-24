@@ -6,13 +6,14 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/TechProber/pro-bot/methods"
+	"github.com/TechProber/pro-bot/method"
+	"github.com/TechProber/pro-bot/model"
 )
 
 // This handler is called everytime telegram sends us a webhook event
 func Handler(res http.ResponseWriter, req *http.Request) {
 	// First, decode the JSON response body
-	body := &WebhookReqBody{}
+	body := &model.WebhookReqBody{}
 	if err := json.NewDecoder(req.Body).Decode(body); err != nil {
 		log.Println("could not decode request body", err)
 		return
@@ -22,7 +23,7 @@ func Handler(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	if err := methods.SayHi(body.Message.Chat.ID); err != nil {
+	if err := method.SayHi(body.Message.Chat.ID); err != nil {
 		log.Println("error in sending reply:", err)
 		return
 	}

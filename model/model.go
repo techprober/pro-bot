@@ -1,4 +1,4 @@
-package main
+package model
 
 // https://core.telegram.org/bots/api#update
 type WebhookReqBody struct {
