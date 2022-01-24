@@ -20,7 +20,7 @@ set-webhook:
 
 .PHONY: build
 build:
-	@mkdir -p functions/app
+	@mkdir -p functions
 	@go get ./...
 	@GOOS=linux GOARCH=amd64 GO111MODULE=on go build -o functions/app ./handler.go
 
