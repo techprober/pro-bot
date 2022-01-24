@@ -9,7 +9,7 @@ import (
 	// "github.com/TechProber/pro-bot/method"
 	// "github.com/TechProber/pro-bot/model"
 	"context"
-	"log"
+	"fmt"
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
@@ -36,7 +36,7 @@ import (
 // }
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
 	params := request.QueryStringParameters
-	log.Println(request.HTTPMethod, request.Path)
+	fmt.Println(request.HTTPMethod, request.Path)
 
 	name := "World"
 	if params["name"] != "" {
