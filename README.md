@@ -39,6 +39,12 @@ Special thanks goes to all [ contributors ](https://github.com/TechProber/pro-bo
 
 [Pro Bot](https://github.com/TechProber/pro-bot) is inspired and introduced in 2022. Currently, it is maintained by [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu).
 
+## Reference
+
+- [Telegram Bot API](https://core.telegram.org/bots/api)
+- [Sending a message to a Telegram channel the easy way](https://medium.com/javarevisited/sending-a-message-to-a-telegram-channel-the-easy-way-eb0a0b32968)
+- [Can a Telegram bot read messages of channel](https://stackoverflow.com/questions/42672034/can-a-telegram-bot-read-messages-of-channel)
+
 ## License
 
 [MIT (C) TechProber](https://github.com/TechProber/pro-bot/blob/master/LICENSE)
