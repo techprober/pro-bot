@@ -12,10 +12,6 @@ import (
 
 func Hello(chatID int64, message string) error {
 	log.Println(message)
-	// reqBody := &model.MessageReqBody{
-	// 	ChatID: chatID,
-	// 	Text:   "Nihao!!",
-	// }
 	reqBody := &model.StickerReqBody{
 		ChatID:  chatID,
 		Sticker: model.GoodMorningStickerRef,

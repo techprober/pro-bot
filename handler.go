@@ -1,34 +1,47 @@
 package main
 
 import (
-	"encoding/json"
-	"log"
+	// "encoding/json"
+	// "log"
 	"net/http"
-	"strings"
+	// "strings"
 
-	"github.com/TechProber/pro-bot/method"
-	"github.com/TechProber/pro-bot/model"
+	// "github.com/TechProber/pro-bot/method"
+	// "github.com/TechProber/pro-bot/model"
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/lambda"
 )
 
-func Handler(res http.ResponseWriter, req *http.Request) {
-	body := &model.WebhookReqBody{} // decode the JSON response body
-	if err := json.NewDecoder(req.Body).Decode(body); err != nil {
-		log.Println("could not decode request body", err)
-		return
-	}
+// func handler(res http.ResponseWriter, req *http.Request) {
 
-	if !strings.Contains(strings.ToLower(body.Message.Text), "morning") {
-		return
-	}
+// body := &model.WebhookReqBody{} // decode the JSON response body
+// if err := json.NewDecoder(req.Body).Decode(body); err != nil {
+// 	log.Println("could not decode request body", err)
+// 	return
+// }
 
-	if err := method.Hello(body.Message.Chat.ID, body.Message.Text); err != nil {
-		log.Println("error in sending reply:", err)
-		return
-	}
+// if !strings.Contains(strings.ToLower(body.Message.Text), "morning") {
+// 	return
+// }
 
-	log.Println("reply sent")
+// if err := method.Hello(body.Message.Chat.ID, body.Message.Text); err != nil {
+// 	log.Println("error in sending reply:", err)
+// 	return
+// }
+
+// log.Println("reply sent")
+// }
+func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+	return &events.APIGatewayProxyResponse{
+		StatusCode:        200,
+		Headers:           map[string]string{"Content-Type": "text/plain"},
+		MultiValueHeaders: http.Header{"Set-Cookie": {"Ding", "Ping"}},
+		Body:              "Hello, World!",
+		IsBase64Encoded:   false,
+	}, nil
 }
 
 func main() {
-	http.ListenAndServe(":3000", http.HandlerFunc(Handler))
+	// http.ListenAndServe(":3000", http.HandlerFunc(handler))
+	lambda.Start(handler)
 }
