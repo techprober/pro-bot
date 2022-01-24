@@ -69,12 +69,6 @@ Special thanks go to all [ contributors ](https://github.com/TechProber/pro-bot/
 
 ## Development Notes
 
-<details><summary>Command List</summary>
-
-Please find more detail in `command_list.json`
-
-</details>
-
 <details><summary>Sample API Call</summary>
 
 ### Send Text
