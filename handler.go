@@ -3,11 +3,13 @@ package main
 import (
 	// "encoding/json"
 	// "log"
-	"net/http"
+
 	// "strings"
 
 	// "github.com/TechProber/pro-bot/method"
 	// "github.com/TechProber/pro-bot/model"
+	"context"
+
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 )
@@ -31,14 +33,19 @@ import (
 
 // log.Println("reply sent")
 // }
-func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+	params := request.QueryStringParameters
+
+	name := "World"
+	if params["name"] != "" {
+		name = params["name"]
+	}
+
 	return &events.APIGatewayProxyResponse{
-		StatusCode:        200,
-		Headers:           map[string]string{"Content-Type": "text/plain"},
-		MultiValueHeaders: http.Header{"Set-Cookie": {"Ding", "Ping"}},
-		Body:              "Hello, World!",
-		IsBase64Encoded:   false,
+		StatusCode: 200,
+		Body:       "Hi " + name,
 	}, nil
+
 }
 
 func main() {
