@@ -66,6 +66,7 @@ Special thanks go to all [ contributors ](https://github.com/TechProber/pro-bot/
 - [https://stackoverflow.com/questions/52765833/why-i-cant-send-sticker-by-its-id](https://stackoverflow.com/questions/52765833/why-i-cant-send-sticker-by-its-id)
 - [Telegram, getting file_id for existing sticker](https://stackoverflow.com/questions/34355648/telegram-getting-file-id-for-existing-sticker)
 - [How to set up push notifications in your Telegram bot](https://www.freecodecamp.org/news/telegram-push-notifications-58477e71b2c2/)
+- [https://lornajane.net/posts/2020/a-first-netlify-function-in-golang](https://lornajane.net/posts/2020/a-first-netlify-function-in-golang)
 
 ## Development Notes
 
@@ -78,6 +79,7 @@ POST `https://api.telegram.org/bot<token>/sendMessage?chat_id=<id>&text=<text_st
 ```bash
 curl -X POST https://api.telegram.org/bot<token>/sendMessage?chat_id=<id>&text=<text_string>
 ```
+
 ### Send Sticker
 
 POST `https://api.telegram.org/bot<token>/sendSticker?chat_id=<id>&sticker=<sticker_id>`
