@@ -15,3 +15,8 @@ type MessageReqBody struct {
 	ChatID int64  `json:"chat_id"`
 	Text   string `json:"text"`
 }
+
+type StickerReqBody struct {
+	ChatID  int64  `json:"chat_id"`
+	Sticker string `json:"sticker"`
+}

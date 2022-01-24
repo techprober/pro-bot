@@ -4,15 +4,21 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
+	"log"
 	"net/http"
 
 	"github.com/TechProber/pro-bot/model"
 )
 
-func SayHi(chatID int64) error {
-	reqBody := &model.MessageReqBody{
-		ChatID: chatID,
-		Text:   "Nihao!!",
+func Hello(chatID int64, message string) error {
+	log.Println(message)
+	// reqBody := &model.MessageReqBody{
+	// 	ChatID: chatID,
+	// 	Text:   "Nihao!!",
+	// }
+	reqBody := &model.StickerReqBody{
+		ChatID:  chatID,
+		Sticker: model.GoodMorningStickerRef,
 	}
 
 	reqBytes, err := json.Marshal(reqBody)
@@ -20,7 +26,11 @@ func SayHi(chatID int64) error {
 		return err
 	}
 
-	res, err := http.Post("https://api.telegram.org/bot5239780065:AAH9p8NF3zxEwjGSrrTaQQLS83PJN_fz8eA/sendMessage", "application/json", bytes.NewBuffer(reqBytes))
+	res, err := http.Post(
+		model.TelegramApi,
+		"application/json",
+		bytes.NewBuffer(reqBytes),
+	)
 	if err != nil {
 		return err
 	}
