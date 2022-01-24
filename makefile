@@ -22,7 +22,7 @@ set-webhook:
 build:
 	@mkdir -p functions/app
 	@go get ./...
-	@GOOS=linux GOARCH=amd64 GO111MODULE=on go build -o functions/app/app .
+	@GOOS=linux GOARCH=amd64 GO111MODULE=on go build -o functions/app ./handler.go
 
 .PHONY: help
 help:
