@@ -13,6 +13,19 @@ Maintainer: [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu)
 
 This repo serves to provide the end-users a way to interact with community telegram channels. Feel free to contribute.
 
+## Pre-commit Hooks
+
+This repo uses the [pre-commit framework](https://github.com/pre-commit/pre-commit-hooks) to set up hooks. To use it, run the following commands:
+
+```bash
+# Install with pip
+pip install pre-commit
+# Install with Homebrew
+brew install pre-commit
+# Install pre-commit under root directory
+pre-commit install
+```
+
 ## Community
 
 - [Hikariai_AI Telegram Group](https://t.me/hikariai_channel)
@@ -22,7 +35,7 @@ This repo serves to provide the end-users a way to interact with community teleg
 
 ## Contributors
 
-Special thanks goes to all [ contributors ](https://github.com/TechProber/cloud-estate/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md).
+Special thanks goes to all [ contributors ](https://github.com/TechProber/pro-bot/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/TechProber/pro-bot/blob/master/docs/contribute.md).
 
 [Pro Bot](https://github.com/TechProber/pro-bot) is inspired and introduced in 2022. Currently, it is maintained by [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu).
 
