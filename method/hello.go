@@ -23,7 +23,7 @@ func Hello(chatID int64, message string) error {
 	}
 
 	res, err := http.Post(
-		model.TelegramApi + model.TelegramApiSendMessagePath,
+		model.TelegramApi+model.TelegramApiSendMessagePath,
 		"application/json",
 		bytes.NewBuffer(reqBytes),
 	)
