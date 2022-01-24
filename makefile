@@ -22,7 +22,7 @@ set-webhook:
 build:
 	@mkdir -p functions
 	@go get ./...
-	@go build -o functions/$(APP_NAME) ./...
+	@go build -o functions/$(APP_NAME) .
 
 .PHONY: help
 help:
